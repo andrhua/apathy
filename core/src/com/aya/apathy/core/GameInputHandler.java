@@ -32,10 +32,10 @@ public class GameInputHandler /*extends InputAdapter*/ implements Resetable {
         right=new Button(Assets.other.findRegion(Assets.OTHER_ARROW_RIGHT), 5*width/16, height/3, 0, 0, true);
         */
         leftb=new ImageButton(new TextureRegionDrawable(Assets.other.findRegion(Assets.OTHER_ARROW_LEFT)));
-        leftb.setPosition(5*width/64, height/6);
+        leftb.setPosition(5*width/64, height/8);
         leftb.setSize(height/6, height/6);
         rightb=new ImageButton(new TextureRegionDrawable(Assets.other.findRegion(Assets.OTHER_ARROW_RIGHT)));
-        rightb.setPosition(13*width/64, height/6);
+        rightb.setPosition(13*width/64, height/8);
         rightb.setSize(height/6, height/6);
         stage=new Stage(Game.viewport);
         stage.addActor(leftb);
