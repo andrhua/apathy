@@ -24,7 +24,7 @@ public class EarRapeSpider extends DynamicGameObject {
     public EarRapeSpider(int id, MapObject mapObject, World world, int zOrder, Indicator indicator) {
         super(id, mapObject, zOrder);
         this.indicator = indicator;
-        velocity = new Vector2(0, 15);
+        velocity = new Vector2(0, -15);
         initial = new Vector2(centerX, centerY);
         state = State.WAITING;
         polygonShape.setAsBox(width / 2, height / 2);
@@ -69,13 +69,13 @@ public class EarRapeSpider extends DynamicGameObject {
                     body.setLinearVelocity(velocity);
                     break;
                 case ONE:
-                    if (body.getPosition().y >= centerY + 38) {
+                    if (body.getPosition().y <= centerY - 38) {
                         state = State.TWO;
                         body.setLinearVelocity(MissingEssences.negate(velocity));
                     }
                     break;
                 case TWO:
-                    if (body.getPosition().y <= centerY) {
+                    if (body.getPosition().y >= centerY) {
                         needToKill = false;
                         body.setLinearVelocity(new Vector2());
                         body.setTransform(initial, 0);

@@ -11,7 +11,7 @@ public class Constants {
     public static float BUTTON_SCALE, SCALE_DURATION;
 
     public Constants(){
-        BUTTON_SCALE=.88f;
+        BUTTON_SCALE=.94f;
         SCALE_DURATION=.005f;
         WIDTH = Gdx.graphics.getWidth();
         HEIGHT = Gdx.graphics.getHeight();

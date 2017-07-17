@@ -7,10 +7,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.scaleTo;
 
-public class AnimationListener extends ClickListener {
+public class TouchListener extends ClickListener {
     private Button myButton;
 
-    public AnimationListener(Button button){
+    public TouchListener(Button button){
         this.myButton =button;
         myButton.setOrigin(myButton.getWidth() / 2, myButton.getHeight() / 2);
         myButton.setTransform(true);

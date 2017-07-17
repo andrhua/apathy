@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="1010" height="110" tilewidth="32" tileheight="32" backgroundcolor="#55aa00" nextobjectid="671">
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="1010" height="110" tilewidth="32" tileheight="32" backgroundcolor="#55aa00" nextobjectid="671">
  <objectgroup color="#0055ff" name="timing_spike">
   <object id="283" x="9887.33" y="1471.33" width="32" height="32"/>
   <object id="284" x="9888" y="1376" width="30.6667" height="30.6667">
@@ -316,10 +316,10 @@
   </object>
  </objectgroup>
  <objectgroup color="#ffffff" name="joe">
-  <object id="5" x="656.024" y="641.551" width="29" height="32"/>
+  <object id="5" x="7088.39" y="1364.94" width="29" height="32"/>
  </objectgroup>
  <objectgroup color="#0000ff" name="prison_timer">
-  <object id="7" x="830" y="670" width="129" height="65"/>
+  <object id="7" x="830" y="670" width="77.4848" height="65"/>
  </objectgroup>
  <objectgroup color="#55ff00" name="prequark">
   <object id="121" x="4962.5" y="1987" width="31.5" height="31"/>
@@ -333,10 +333,10 @@
   <object id="11" x="544" y="831" width="255" height="34"/>
  </objectgroup>
  <objectgroup color="#ff0000" name="muk">
-  <object id="14" x="556.667" y="31.3333" width="229.333" height="223.333"/>
+  <object id="14" x="561.637" y="160.667" width="221.333" height="220"/>
  </objectgroup>
  <objectgroup color="#ff5500" name="hint">
-  <object id="16" x="289.333" y="608" width="252" height="189.333">
+  <object id="16" x="286.303" y="644.364" width="252" height="119.636">
    <properties>
     <property name="knowledge" type="int" value="10"/>
    </properties>

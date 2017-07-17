@@ -20,7 +20,8 @@ public class Hint extends StaticGameObject {
         String text= Game.language.bundle.get("knowledge").split(",")[Integer.valueOf(mapObject.getProperties().getProperty("knowledge"))];
         GlyphLayout glyphLayout=new GlyphLayout(Assets.main20, text);
         label=new Label(text, new Label.LabelStyle(Assets.main20, Color.BLACK));
-        label.setBounds(left*Constants.PPM, bottom*Constants.PPM, glyphLayout.width+ Constants.WIDTH/50, glyphLayout.height*1.5f);
+        label.setBounds(left*Constants.PPM, bottom*Constants.PPM, width*Constants.PPM, height*Constants.PPM);
+        label.setWrap(true);
         label.setAlignment(Align.center);
     }
 

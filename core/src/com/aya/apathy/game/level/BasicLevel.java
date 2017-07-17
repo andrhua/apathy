@@ -85,18 +85,16 @@ public abstract class BasicLevel implements Renderable, Updatable, Disposable {
     }
 
     protected boolean isLocatedInCamera(float x, float y, float width, float height){
-        return (x+width)*Constants.PPM>camera.position.x-Constants.CAMERA_WIDTH
-                && x*Constants.PPM<camera.position.x+Constants.CAMERA_WIDTH
+        return (x+width)*Constants.PPM>camera.position.x-Constants.CAMERA_WIDTH_50
+                && x*Constants.PPM<camera.position.x+Constants.CAMERA_WIDTH_50
                 &&
-                (y+height)*Constants.PPM>camera.position.y-Constants.CAMERA_HEIGHT
-                && y*Constants.PPM<camera.position.y+Constants.CAMERA_HEIGHT;
+                (y+height)*Constants.PPM>camera.position.y-Constants.CAMERA_HEIGHT_50
+                && y*Constants.PPM<camera.position.y+Constants.CAMERA_HEIGHT_50;
     }
 
     @Override
     public void update(float delta) {
-        Gdx.app.log("begin", "!");
         world.step(1 / 60f, 8, 3);
-        Gdx.app.log("end", "!");
         removeObjects();
     }
 

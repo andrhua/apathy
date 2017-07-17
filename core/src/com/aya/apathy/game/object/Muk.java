@@ -30,7 +30,7 @@ public class Muk extends StaticGameObject implements Queryable, Resetable {
         fixture = body.createFixture(fixtureDef);
         fixture.setUserData(new FixtureData(FixtureData.Type.MUK, id));
         type = FixtureData.Type.MUK;
-        velocity = new Vector2(0, 10);
+        velocity = new Vector2(0, -10);
         textureRegion= Assets.Game.game_objects.findRegion(String.valueOf(Assets.Game.Object.MUK.ordinal()));
         textureSize=7*Constants.PPM;
     }

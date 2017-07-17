@@ -105,7 +105,7 @@ public class Platform extends StaticGameObject {
         public void draw(SpriteBatch spriteBatch, ShapeRenderer shapeRenderer) {
             shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
             shapeRenderer.setColor(Assets.Game.wall);
-            shapeRenderer.rect((centerX-width/2)*Constants.PPM, (centerY-height/2)*Constants.PPM,
+            shapeRenderer.rect(left*Constants.PPM, bottom*Constants.PPM,
                     width/2*Constants.PPM, height/2*Constants.PPM,
                     width*Constants.PPM, height*Constants.PPM,
                     1, 1, angle);
@@ -114,6 +114,8 @@ public class Platform extends StaticGameObject {
 
         @Override
         public void update(float elapsedTime) {
+            left=body.getPosition().x-+width/2;
+            bottom=body.getPosition().y-height/2;
             if (direction == Direction.VERTICAL) {
                 if (body.getPosition().y <= this.centerY - down) isGoingDown = false;
                 else if (body.getPosition().y >= this.centerY +up) isGoingDown = true;
@@ -172,13 +174,13 @@ public class Platform extends StaticGameObject {
         @Override
         public void update(float elapsedTime) {
             if (needToStartDestroy) {
-                timeToDestroy += elapsedTime;
-                if (timeToDestroy > 2600) setIdleState();
+                timeToDestroy += elapsedTime*1000;
+                if (timeToDestroy > 2000) setIdleState();
             }
 
             float appearingTime = 1000;
             float disappearingTime = 2000;
-            time += elapsedTime;
+            time += elapsedTime*1000;
             switch (state) {
                 case APPEAR:
                     if (time > appearingTime) {

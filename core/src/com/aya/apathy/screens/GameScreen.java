@@ -61,8 +61,8 @@ public class GameScreen extends BasicScreen {
         level.setGameScreenContext(this);
         gameInputHandler=new GameInputHandler();
         setState(State.GAME);
-        resume=new Button(Game.language.bundle.get("resume"), 14*width/15, height/20, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
-        tryAgain=new Button(Game.language.bundle.get("try_again"), 26*width/30, height/20, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
+        resume=new Button(Game.language.bundle.get("resume"), 41*width/45, height/20, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
+        tryAgain=new Button(Game.language.bundle.get("try_again"), 53*width/60, height/20, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
         exit=new Button(Game.language.bundle.get("exit"), width/15, height/20, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
         winLayout=new GlyphLayout(Assets.main15, Game.language.bundle.get("win"));
         loseLayout=new GlyphLayout(Assets.main15, Game.language.bundle.get("lose"));

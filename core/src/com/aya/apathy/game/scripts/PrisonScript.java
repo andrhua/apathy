@@ -3,6 +3,7 @@ package com.aya.apathy.game.scripts;
 import com.aya.apathy.game.object.Muk;
 import com.aya.apathy.game.object.Platform;
 import com.aya.apathy.game.object.PrisonTimer;
+import com.badlogic.gdx.Gdx;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,8 +22,14 @@ public class PrisonScript extends BasicScript {
 
     @Override
     public void execute() {
-        if (System.currentTimeMillis() % 2 == 0) wall.queryForMagic();
-        else muk.queryForMagic();
+        if (System.currentTimeMillis() % 2 == 0) {
+            wall.queryForMagic();
+            Gdx.app.log("script", "wall");
+        }
+        else {
+            muk.queryForMagic();
+            Gdx.app.log("script", "muk");
+        }
         reset();
     }
 
@@ -34,8 +41,7 @@ public class PrisonScript extends BasicScript {
 
     @Override
     protected boolean checkCondition(float elapsedTime) {
-        time += elapsedTime;
-        return time >= TimeUnit.MINUTES.toSeconds(2);
+        return prisonTimer.getTime()==0;
     }
 
     @Override

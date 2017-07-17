@@ -49,7 +49,7 @@ public class LoadingScreen extends BasicScreen {
         switch (state){
             case WAITING: state=State.LOADING; break;
             case LOADING: new Assets(); state=State.FINISHED; break;
-            case FINISHED:/*if (time>=5)*/ game.setScreen(new MainScreen(game)); break;
+            case FINISHED:if (time>=4.4f) game.setScreen(new MainScreen(game)); break;
         }
 
     }

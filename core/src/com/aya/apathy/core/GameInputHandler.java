@@ -3,18 +3,14 @@ package com.aya.apathy.core;
 import com.aya.apathy.Game;
 import com.aya.apathy.game.object.Joe;
 import com.aya.apathy.game.object.Resetable;
-import com.aya.apathy.ui.Button;
-import com.aya.apathy.util.AnimationListener;
+import com.aya.apathy.util.TouchListener;
 import com.aya.apathy.util.Assets;
 import com.aya.apathy.util.Constants;
-import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
 public class GameInputHandler /*extends InputAdapter*/ implements Resetable {
@@ -48,7 +44,7 @@ public class GameInputHandler /*extends InputAdapter*/ implements Resetable {
             }
         });
 
-        leftb.addListener(new AnimationListener(leftb){
+        leftb.addListener(new TouchListener(leftb){
 
             @Override
             public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
@@ -63,7 +59,7 @@ public class GameInputHandler /*extends InputAdapter*/ implements Resetable {
             }
         });
 
-        rightb.addListener(new AnimationListener(rightb){
+        rightb.addListener(new TouchListener(rightb){
             @Override
             public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
                 super.enter(event, x, y, pointer, fromActor);
