@@ -21,6 +21,7 @@ public abstract class BasicScreen extends ScreenAdapter implements Renderable, B
     protected GlyphLayout glyphLayout;
     protected int width, height;
     protected Game game;
+    private boolean sd;
 
     public BasicScreen(Game game){
         this.game=game;
