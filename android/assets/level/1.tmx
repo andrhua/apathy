@@ -316,7 +316,7 @@
   </object>
  </objectgroup>
  <objectgroup color="#ffffff" name="joe">
-  <object id="5" x="7088.39" y="1364.94" width="29" height="32"/>
+  <object id="5" x="3058.09" y="1483.12" width="29" height="32"/>
  </objectgroup>
  <objectgroup color="#0000ff" name="prison_timer">
   <object id="7" x="830" y="670" width="77.4848" height="65"/>

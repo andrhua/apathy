@@ -1,6 +1,7 @@
 package com.aya.apathy.screens;
 
 import com.aya.apathy.Game;
+import com.aya.apathy.ui.BasicActivatable;
 import com.aya.apathy.util.Constants;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -9,10 +10,13 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.utils.Array;
 
 public abstract class BasicScreen extends ScreenAdapter implements Renderable, Backable, InputProcessor{
 
     protected SpriteBatch batch;
+    protected Array<BasicActivatable> widgets;
+    protected int activeWidget;
     protected ShapeRenderer shapeRenderer;
     protected GlyphLayout glyphLayout;
     protected int width, height;
@@ -20,6 +24,8 @@ public abstract class BasicScreen extends ScreenAdapter implements Renderable, B
 
     public BasicScreen(Game game){
         this.game=game;
+        widgets=new Array<>();
+        activeWidget=0;
         Gdx.input.setInputProcessor(this);
     }
 

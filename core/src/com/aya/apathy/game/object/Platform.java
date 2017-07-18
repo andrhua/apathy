@@ -6,14 +6,12 @@ import com.aya.apathy.game.tiled.core.MapObject;
 import com.aya.apathy.util.Assets;
 import com.aya.apathy.util.Constants;
 import com.aya.apathy.util.MissingEssences;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 
 public class Platform extends StaticGameObject {
@@ -130,6 +128,13 @@ public class Platform extends StaticGameObject {
 
         @Override
         public void reset() {
+            if (direction == Direction.VERTICAL) {
+                velocity = new Vector2(0, Float.valueOf(mapObject.getProperties().getProperty("velocity")));
+                isGoingDown = true;
+            } else {
+                velocity = new Vector2(Float.valueOf(mapObject.getProperties().getProperty("velocity")), 0);
+                isGoingRight = true;
+            }
             body.setTransform(new Vector2(centerX, centerY), 0);
         }
 
@@ -141,6 +146,7 @@ public class Platform extends StaticGameObject {
         public enum State {APPEAR, DISAPPEAR}
         public State state;
         private World world;
+        private boolean isDestroyed;
 
         public DisposableFlashing(int id, MapObject mapObject, World world, int zOrder) {
             super(id, mapObject, zOrder);
@@ -201,6 +207,7 @@ public class Platform extends StaticGameObject {
             super.setIdleState();
             body.setActive(false);
             world.destroyBody(body);
+            isDestroyed =true;
         }
 
         @Override
@@ -210,8 +217,11 @@ public class Platform extends StaticGameObject {
 
         @Override
         public void reset() {
-            body.setActive(false);
-            world.destroyBody(body);
+            if (!isDestroyed) {
+                body.setActive(false);
+                world.destroyBody(body);
+            }
+            isDestroyed=false;
             body = world.createBody(bodyDef);
             fixture = body.createFixture(fixtureDef);
             fixture.setUserData(new FixtureData(FixtureData.Type.DISPOSABLE_FLASHING_PLATFORM, id));

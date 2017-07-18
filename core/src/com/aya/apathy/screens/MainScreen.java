@@ -25,6 +25,7 @@ public class MainScreen extends BasicScreen {
         settings=new Button(Game.language.bundle.get("settings"), width/2, height/4, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
         exit=new Button(Game.language.bundle.get("exit"), width/2, height/8, Color.argb8888(0,0,0,0), Color.rgb565(220/255f, 220/255f, 220/255f), true);
         exitPopup=new ActionPopup(Game.language.bundle.get("exit_confirmation"));
+        widgets.addAll(start, settings, start);
     }
 
 

@@ -39,24 +39,29 @@ public class EarRapeSpider extends DynamicGameObject {
         body.createFixture(fixtureDef).setUserData(new FixtureData(FixtureData.Type.SPIDER, id));
         type = FixtureData.Type.SPIDER;
         textureRegion=Assets.Game.game_objects.findRegion(String.valueOf(Assets.Game.Object.SPIDER.ordinal()));
-        textureSize=14*Constants.PPM;
+        textureSize=width*Constants.PPM;
+        angle=180;
+
     }
 
     @Override
     public void draw(SpriteBatch spriteBatch, ShapeRenderer shapeRenderer) {
-        if (isScreamed){
             spriteBatch.begin();
             spriteBatch.draw(textureRegion,
-                    (body.getPosition().x - width / 2)* Constants.PPM ,
-                    (body.getPosition().y - height / 2)*Constants.PPM ,
+                    (body.getPosition().x-width/2)* Constants.PPM ,
+                    (body.getPosition().y+2)*Constants.PPM ,
+                    body.getPosition().x,
+                    body.getPosition().y,
                     textureSize,
-                    textureSize);
+                    textureSize,
+                    1, 1, angle);
             spriteBatch.end();
-        }
     }
 
     @Override
     public void update(float elapsedTime) {
+        left=body.getPosition().x-width/2;
+        bottom=body.getPosition().y-height/2;
         if (indicator.isActive() && !isScreamed) {
             Game.sfx.play(Sfx.SoundType.JOHN_CENA);
             isScreamed = true;
@@ -71,6 +76,7 @@ public class EarRapeSpider extends DynamicGameObject {
                 case ONE:
                     if (body.getPosition().y <= centerY - 38) {
                         state = State.TWO;
+                        angle=0;
                         body.setLinearVelocity(MissingEssences.negate(velocity));
                     }
                     break;

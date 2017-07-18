@@ -34,8 +34,10 @@ public class Collectible extends Prequark {
 
     @Override
     public void reset() {
-        body.setActive(false);
-        world.destroyBody(body);
+        if (!isActive()) {
+            body.setActive(false);
+            world.destroyBody(body);
+        }
         body = world.createBody(bodyDef);
         body.createFixture(fixtureDef).setUserData(new FixtureData(FixtureData.Type.COLLECTIBLE, id));
         setActiveState();

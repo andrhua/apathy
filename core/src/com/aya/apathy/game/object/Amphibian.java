@@ -53,7 +53,7 @@ public class Amphibian extends HauntingEnemy {
                 Vector2 direction = Game.joe.getPosition().sub(body.getPosition());
                 scaleX = direction.x < 0 ? -1 : 1;
                 Vector2 velocity = new Vector2(direction.x / direction.len(), direction.y / direction.len());
-                velocity=velocity.mulAdd(velocity, 3.5f);
+                velocity=velocity.mulAdd(velocity, 3.1f);
                 body.setLinearVelocity(velocity);
         }
     }

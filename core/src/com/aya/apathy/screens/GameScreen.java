@@ -97,7 +97,7 @@ public class GameScreen extends BasicScreen {
     private void drawGUI() {
         batch.setProjectionMatrix(game.camera.combined);
         shapeRenderer.setProjectionMatrix(game.camera.combined);
-        gameInputHandler.getStage().draw();
+        if (!gameInputHandler.isXboxConnected())gameInputHandler.getStage().draw();
         if (state ==State.PAUSE||state==State.LOSE||state==State.WIN) {
             Gdx.gl.glEnable(GL20.GL_BLEND);
             Gdx.gl.glBlendFunc(GL20.GL_ONE, GL20.GL_ONE_MINUS_SRC_ALPHA);
