@@ -1,0 +1,174 @@
+
+game_objects.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+0
+  rotate: false
+  xy: 1032, 1037
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 458, 540
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 1603, 1756
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 458, 670
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 272, 272
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 1343, 1754
+  size: 258, 258
+  orig: 258, 258
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 1012, 1425
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 1012, 1683
+  size: 329, 329
+  orig: 329, 329
+  offset: 0, 0
+  index: -1
+16
+  rotate: false
+  xy: 2, 530
+  size: 454, 454
+  orig: 454, 454
+  offset: 0, 0
+  index: -1
+17
+  rotate: false
+  xy: 860, 1167
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+18
+  rotate: false
+  xy: 1162, 1037
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+19
+  rotate: false
+  xy: 2, 986
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1162, 910
+  size: 128, 125
+  orig: 128, 125
+  offset: 0, 0
+  index: -1
+20
+  rotate: false
+  xy: 774, 909
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+21
+  rotate: false
+  xy: 716, 651
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+22
+  rotate: false
+  xy: 1118, 1167
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+23
+  rotate: false
+  xy: 1032, 907
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 516, 1518
+  size: 494, 494
+  orig: 494, 494
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 1500
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 516, 1174
+  size: 342, 342
+  orig: 342, 342
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 516, 928
+  size: 256, 244
+  orig: 256, 244
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 1861, 1854
+  size: 158, 158
+  orig: 158, 158
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 260
+  size: 268, 268
+  orig: 268, 268
+  offset: 0, 0
+  index: -1
